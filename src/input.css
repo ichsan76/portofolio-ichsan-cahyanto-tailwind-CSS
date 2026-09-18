@@ -1,0 +1,60 @@
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+@import "tailwindcss";
+
+.navbar-fixed {
+    @apply fixed top-0 left-0 w-full z-[9999] bg-white/90;
+
+    backdrop-filter: blur(5px);
+    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.hamburger-line {
+    @apply w-[30px] h-[2px] my-2 block bg-slate-600 transition duration-300 ease-in-out;
+}
+
+.hamburger-active > span:nth-child(1) {
+    @apply rotate-45 translate-y-2;
+}
+
+.hamburger-active > span:nth-child(2) {
+    @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3) {
+    @apply -rotate-45 -translate-y-2;
+}
+
+@theme {
+    --breakpoint-2xl: 1320px;
+}
+
+@utility container {
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 16px;
+
+    @media (width >= 40rem) {
+        max-width: 40rem;
+    }
+
+    @media (width >= 48rem) {
+        max-width: 48rem;
+    }
+
+    @media (width >= 64rem) {
+        max-width: 64rem;
+    }
+
+    @media (width >= 80rem) {
+        max-width: 80rem;
+    }
+
+    @media (width >= 96rem) {
+        max-width: 1320px;
+    }
+}
+
